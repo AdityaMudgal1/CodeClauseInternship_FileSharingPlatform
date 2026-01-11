@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Secure File Sharing</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">SecureShare</div>
+    <span class="tagline">Fast • Secure • Reliable</span>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container">
+    <section class="hero">
+      <h1>Secure File Sharing</h1>
+      <p>Upload files securely and share them using protected links.</p>
+    </section>
+
+    <section class="upload-card">
+      <label class="file-box">
+        <input type="file" id="file" hidden />
+        <span id="fileText">Select File</span>
+      </label>
+
+      <input type="text" id="password" placeholder="Password (optional)" />
+      <input type="datetime-local" id="expiry" />
+
+      <button id="uploadBtn" onclick="uploadFile()">
+        <span id="btnText">Upload & Generate Link</span>
+        <span class="spinner" id="spinner"></span>
+      </button>
+
+      <div id="result" class="result-box"></div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 SecureShare | Built by Aditya Mudgal</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
